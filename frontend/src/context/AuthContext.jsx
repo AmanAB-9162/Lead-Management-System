@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
   // Configure axios defaults
   useEffect(() => {
     axios.defaults.withCredentials = true;
-    axios.defaults.baseURL = 'https://lead-management-system-1-13qz.onrender.com';
+    axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
     
     // Set up request interceptor to include token from localStorage
     const token = localStorage.getItem('token');
