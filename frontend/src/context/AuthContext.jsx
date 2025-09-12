@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
   // Configure axios defaults
   useEffect(() => {
     axios.defaults.withCredentials = true;
-    axios.defaults.baseURL = 'http://localhost:5000';
+    axios.defaults.baseURL = 'https://lead-management-system-1-13qz.onrender.com';
     
     // Set up request interceptor to include token from localStorage
     const token = localStorage.getItem('token');

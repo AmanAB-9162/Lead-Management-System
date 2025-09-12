@@ -39,6 +39,27 @@ app.use(cookieParser());
 app.use('/api/auth', authRoutes);
 app.use('/api/leads', leadRoutes);
 
+// Simple test page
+app.get('/', (req, res) => {
+  res.send(`
+    <html>
+      <head><title>Lead Management API</title></head>
+      <body>
+        <h1>🎉 Lead Management System API is Live!</h1>
+        <p>Backend is running successfully on Render</p>
+        <h2>Available Endpoints:</h2>
+        <ul>
+          <li><a href="/api/auth/me">GET /api/auth/me</a></li>
+          <li><a href="/api/leads">GET /api/leads</a></li>
+          <li>POST /api/auth/login</li>
+          <li>POST /api/auth/register</li>
+        </ul>
+        <p><strong>Status:</strong> ✅ Online</p>
+      </body>
+    </html>
+  `);
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.status(200).json({
