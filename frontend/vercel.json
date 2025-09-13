@@ -2,10 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://your-backend-url.onrender.com/api/$1"
+      "destination": "https://lead-management-system-1-r714.onrender.com/api/$1"
     }
-  ],
-  "env": {
-    "VITE_API_URL": "https://your-backend-url.onrender.com"
-  }
+  ]
 }
